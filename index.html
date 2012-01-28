@@ -1,0 +1,38 @@
+<html>
+<head>
+  <title>HTML5 fileSystem API</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="styles/fs.css">
+</head>
+<body>
+
+  <div id="web-editor">
+
+    <aside id="dir-listing">
+
+      <div id="dir-controls">
+        <button id="new-file"></button>
+        <button id="new-folder"></button>
+      </div>
+
+      <ul id="dir-tree"></ul>
+
+    </aside>
+
+    <section id="workspace">
+
+      <div id="info-pane">
+        <span>Create new file or open existing to begin editing</span>
+        <span id="editor-controls">
+          <a id="save" href="#">save</a>
+        </span>
+      </div>
+
+      <div id="editor" contenteditable></div>
+
+    </section>
+
+  </div>
+
+<script src="js/fs.js"></script>
+</body>
+</html>

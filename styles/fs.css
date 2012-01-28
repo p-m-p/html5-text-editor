@@ -1,0 +1,82 @@
+/* =Elements
+----------------------------------------------------------------------------- */
+button {
+  border: none;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li > ul {
+  padding: 0 0 0 8px;
+}
+
+#new-file {
+  background: url(images/new-file.png) center no-repeat;
+}
+
+#new-folder {
+  background: url(images/new-folder.png) center no-repeat;
+}
+
+
+/* =Layout
+----------------------------------------------------------------------------- */
+#web-editor {
+  margin: 20px auto;
+  max-width: 1024px;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+}
+
+#dir-listing {
+  width: 200px;
+  height: 400px;
+  margin: 0 20px 0 0;
+  overflow: auto;
+  padding: 30px 6px 6px;
+  border: solid 1px gray;
+  position: relative;
+}
+
+#dir-controls {
+  position: absolute;
+  top: 2px;
+  right: 6px;
+}
+
+#workspace {
+  -webkit-box-flex: 1;
+  border: solid 1px gray;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+#info-pane {
+  border-bottom: solid 1px gray;
+  height: 12px;
+  padding: 6px;
+  min-height: 12px;
+  font: 12px/12px helvetica, arial, sans-serif;
+  color: #aaa;
+  position: relative;
+}
+
+#editor {
+  -webkit-box-flex: 1;
+  padding: 10px;
+}
+
+#editor-controls {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+}
