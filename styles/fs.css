@@ -9,6 +9,11 @@ button {
   cursor: pointer;
 }
 
+pre {
+  border: none;
+  margin: 0;
+}
+
 ul, li {
   margin: 0;
   padding: 0;
@@ -19,6 +24,10 @@ li > ul {
   padding: 0 0 0 8px;
 }
 
+input {
+  width: 98%;
+}
+
 #new-file {
   background: url(images/new-file.png) center no-repeat;
 }
@@ -27,6 +36,12 @@ li > ul {
   background: url(images/new-folder.png) center no-repeat;
 }
 
+
+/* =Directory listing
+----------------------------------------------------------------------------- */
+.new {
+  display: none;
+}
 
 /* =Layout
 ----------------------------------------------------------------------------- */
@@ -39,7 +54,6 @@ li > ul {
 
 #dir-listing {
   width: 200px;
-  height: 400px;
   margin: 0 20px 0 0;
   overflow: auto;
   padding: 30px 6px 6px;
@@ -51,6 +65,16 @@ li > ul {
   position: absolute;
   top: 2px;
   right: 6px;
+}
+
+#console {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 #workspace {
