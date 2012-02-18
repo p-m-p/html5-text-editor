@@ -34,7 +34,25 @@
 
       m.list(pwd);
 
-      editor = CKEDITOR.replace("editor", {"toolbar": "Basic", "height": 400});
+      editor = new TINY.editor.edit('editor', {
+        id:'edit',
+        cssclass:'te',
+        width: "100%",
+        height: 300,
+        controlclass:'tecontrol',
+        rowclass:'teheader',
+        dividerclass:'tedivider',
+        controls:['bold','italic','underline','strikethrough','style', '|','subscript','superscript','|',
+              'orderedlist','unorderedlist','|','outdent','indent','|','leftalign',
+              'centeralign','rightalign','blockjustify','|','unformat','|','undo','redo','n',
+              '|','image','hr','link','unlink','|','cut','copy','paste','print'],
+        footer:true,
+        fonts:['Verdana','Arial','Georgia','Trebuchet MS'],
+        xhtml:true,
+        bodyid:'editor',
+        footerclass:'tefooter',
+        toggle:{text:'source',activetext:'wysiwyg',cssclass:'toggle'}
+      });
 
     };
 
@@ -283,7 +301,7 @@
 
           writer.onerror = m.err;
 
-          bb.append(editor.getData());
+          bb.append(editor.getContent());
           writer.write(bb.getBlob("text/plain"));
 
         });
@@ -295,9 +313,9 @@
 
     m.setEditor = function (content) {
 
-      editor.setData(content || "");
+      editor.setContent(content || "");
       info.querySelector("span").innerHTML = "Editing: " + af.fullPath;
-      editor.focus();
+      //editor.focus();
 
     };
 
@@ -321,3 +339,13 @@
   );
 
 })(window);
+
+// adding the api I want for getting and setting editor content
+TINY.editor.edit.prototype.getContent = function () {
+  this.post();
+  return this.t.value;
+};
+TINY.editor.edit.prototype.setContent = function (t) {
+  this.e.body.innerHTML = t;
+  this.post();
+};

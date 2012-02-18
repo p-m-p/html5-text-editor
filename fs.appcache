@@ -1,0 +1,12 @@
+CACHE MANIFEST
+
+CACHE:
+js/fs.js
+styles/images/new-file.png
+styles/images/new-folder.png
+styles/fs.css
+index.html
+
+NETWORK:
+ckeditor/ckeditor.js
+ckeditor/
